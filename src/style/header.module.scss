@@ -1,0 +1,27 @@
+@import './main.scss';
+
+.mainContainer{
+    color:rgb(255, 255, 255);
+    width:100%;
+    height: calc(100vh - 60px);
+    background-image: url('../asset/images/bg2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.firsttext{
+    font-family: var(--font-poppins);
+    font-size: 40px;
+    text-align: center;
+}
+.secondtext{
+    font-family: var(--font-poppinsTini);
+    font-size: 17px;
+    text-align: center;
+}

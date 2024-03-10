@@ -1,0 +1,46 @@
+@import './main.scss';
+
+//navigation style
+
+.navMain{
+    width: 100%;
+    height: 60px;
+    background-color: $blueColor;
+}
+
+.navLogo{
+    height: 50px;
+    width: auto;
+}
+
+.logoContainer{
+    margin-left: 200px;
+    height: 60px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    float: left;
+}
+
+.linkContainer{
+    float: right;
+    height: 60px;
+    margin-right: 200px;
+    line-height: 60px;
+}
+.lien{
+    font-family: var(--font-poppins);
+    text-decoration: none;
+    cursor: pointer;
+    margin-left: 10px;
+    color: white;
+    font-size: 15px;
+}
+
+.activeLink{
+    background-color: $orangeColor;
+    padding: 10px;
+    border-radius: 15px;
+    color: $blueColor;
+    font-family: var(--font-poppinsbold);
+}
