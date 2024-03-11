@@ -1,0 +1,33 @@
+#main{
+    padding:60px 200px 60Px 200px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+#mainUa{
+    padding:60px 200px 60Px 200px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    background-color: rgb(238, 238, 238);
+}
+
+.pictureContainer{
+    width: 50%;
+}
+.photo{
+    width: 100%;
+    height: auto;
+}
+.text{
+    width: 50%;
+    font-family: var(--font-poppinsTini);
+    font-size: 12px;
+    text-align: justify;
+}
+
+.poste{
+    font-family: var(--font-poppins);
+    font-size: 15px;
+    margin-top: 5px;
+}
