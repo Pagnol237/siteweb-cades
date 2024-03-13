@@ -1,0 +1,42 @@
+@import './main.scss';
+
+.main{
+    width: 100%;
+    min-height: 150px;
+    background-image: url('../asset//images//background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20px 200px 20px 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bloc{
+    padding: 20px;
+    border-right: solid 2px white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.boxContainer{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.bloc:last-child{
+    border-right: none;
+}
+.chiffre{
+    color: white;
+    font-family: var(--font-poppins);
+    font-size: 50px;
+}
+.text{
+    color: white;
+    font-family: var(--font-poppinsTini);
+    font-size: 15px;
+}

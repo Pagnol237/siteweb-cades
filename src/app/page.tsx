@@ -8,6 +8,9 @@ import styles1 from '@/style/activité.module.scss'
 import Activite from '@/components/Activite';
 import activite from '@/datas/activites'
 import Titre1 from '@/components/Titre1'
+import Signalitique from '@/components/Signalitique'
+import styles2 from '@/style/thematique.module.scss'
+import Thematique from '@/components/Thematique'
 
 
 
@@ -33,6 +36,11 @@ export default function Home() {
           />
         ))}
         
+      </div>
+      <Signalitique/>
+      <div id={styles2.thematique}>
+        <Titre1>Thématiques</Titre1>
+        <Thematique/>
       </div>
     </>
   );
