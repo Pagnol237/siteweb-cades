@@ -3,7 +3,7 @@ import styles from '@/style/navigation.module.scss'
 import Logo from '@/images/logo.jpg'
 import Image from 'next/image'
 import Link from 'next/link'
-import {Roboto,Poppins} from '@next/font/google'
+import {Roboto,Poppins} from 'next/font/google'
 
 const poppins = Poppins({
   subsets:['latin'],

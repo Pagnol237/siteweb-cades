@@ -2,7 +2,7 @@
 
 import React from 'react'
 import styles from '@/style/header.module.scss'
-import { Roboto,Poppins } from '@next/font/google'
+import { Roboto,Poppins } from 'next/font/google'
 import CountDown from "@/components/CountDown";
 
 

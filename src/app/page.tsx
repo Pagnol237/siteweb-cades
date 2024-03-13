@@ -6,6 +6,8 @@ import PresidentBlock from "@/components/PresidentBlock";
 import PresidentUA from '@/components/PresidentUA'
 import styles1 from '@/style/activité.module.scss'
 import Activite from '@/components/Activite';
+import activite from '@/datas/activites'
+import Titre1 from '@/components/Titre1'
 
 
 
@@ -21,7 +23,16 @@ export default function Home() {
       <PresidentBlock/>
       <PresidentUA/>
       <div id={styles1.main}>
-        <Activite/>
+        <Titre1>Composantes</Titre1>
+        {activite.map((data)=>(
+          <Activite
+          numero={data. numero}
+          texte={data. texte}
+          titre={data. titre}
+          picture={data. picture}
+          />
+        ))}
+        
       </div>
     </>
   );

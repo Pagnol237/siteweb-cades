@@ -6,10 +6,10 @@
     padding: 90px 200px 80px 200px;
 }
 .nbr{
-    font-family: var(--font-poppins);
-    font-size: 55px;
+    font-size: 65px;
     -webkit-text-stroke: 2px $orangeColor;
     color: white;
+    font-family: var(--font-poppins);
 }
 .box{
     display: flex;
@@ -17,18 +17,25 @@
     gap:40px;
     align-items: center;
     margin-top: 15px;
+    box-shadow: 8px 8px 12px rgba(128, 127, 127, 0.3);
+    padding: 15px;
+    border-radius: 25px;
 }
 .miniature{
-    width: 500px;
     height: auto;
 }
 .images{
-    width: 100%;
+    width: 150px;
     height: auto;
     border-radius: 25px;
 }
 .text{
-    font-family: var(--font-poppinsTini);
     font-size: 12px;
     text-align: justify;
+    font-family: var(--font-poppinsTini);
+}
+.activityTitle{
+    font-family: var(--font-poppins);
+    font-size: 18px;
+    margin-bottom: 15px;
 }

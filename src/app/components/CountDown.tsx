@@ -40,6 +40,7 @@ function CountDown() {
         const timer = setInterval(()=>{
             setTimeleft(getTimeLeft());
         },1000);
+       
     },[]);
 
   return (

@@ -2,7 +2,8 @@ import React from 'react'
 import styles from '@/style/PresidentBlock.module.scss'
 import Image from 'next/image'
 import Pic from '@/images/pr_rca.jpg'
-import { Roboto,Poppins } from '@next/font/google'
+import { Roboto,Poppins } from 'next/font/google'
+
 
 
 const poppins = Poppins({
