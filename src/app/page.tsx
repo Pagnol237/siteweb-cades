@@ -11,6 +11,8 @@ import Titre1 from '@/components/Titre1'
 import Signalitique from '@/components/Signalitique'
 import styles2 from '@/style/thematique.module.scss'
 import Thematique from '@/components/Thematique'
+import Sponsoring from '@/components/Sponsoring'
+import styles3 from '@/style/sponsoring.module.scss'
 
 
 
@@ -41,6 +43,11 @@ export default function Home() {
       <div id={styles2.thematique}>
         <Titre1>Thématiques</Titre1>
         <Thematique/>
+      </div>
+
+      <div id={styles3.sponsoring}>
+        <Titre1>Sponsoring</Titre1>
+        <Sponsoring/>
       </div>
     </>
   );
