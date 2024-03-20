@@ -10,7 +10,7 @@ import Logo from '@/images/logo.jpg'
 import Image from 'next/image'
 import { Link } from 'react-scroll'
 import {Roboto,Poppins} from 'next/font/google'
-import { HiMiniBars3 } from "react-icons/hi2";
+import { HiMiniBars3,HiMiniXMark } from "react-icons/hi2";
 import { useState } from 'react'
 
 const poppins = Poppins({
@@ -43,7 +43,11 @@ function Navigation(props:any) {
           />
       </div>
       <div  className={styles.bars}>
-            <HiMiniBars3 size={25} color='white'  onClick={togglemenu}/>
+            {isopen === false?
+            <HiMiniBars3 size={25} color='white'  onClick={togglemenu}/>:
+            <HiMiniXMark size={25} color='white'  onClick={togglemenu}/>
+            }
+            
         </div>
 
         <div className={`${isopen?styles.on:styles.off}`}>
