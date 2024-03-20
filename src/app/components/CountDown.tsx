@@ -5,9 +5,10 @@ import { clearInterval } from 'timers';
 import {Poppins} from '@next/font/google';
 
 
-const COUNTDOWN_TARGET = new Date("2024-05-28T23:59:59");
+const COUNTDOWN_TARGET:any = new Date("2024-05-28T23:59:59");
+const actuDate:any = new Date();
 const getTimeLeft =  () => {
-    const totalTimeLeft = COUNTDOWN_TARGET - new Date();
+    const totalTimeLeft = COUNTDOWN_TARGET - actuDate;
     const Jours = Math.floor(totalTimeLeft /(1000 * 60 *60 *24));
     const Heures = Math.floor((totalTimeLeft / (1000 * 60 * 60))% 24);
     const Minutes = Math.floor((totalTimeLeft/ (1000 * 60))%60);
