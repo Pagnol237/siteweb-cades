@@ -107,4 +107,17 @@
         grid-template-columns: repeat(auto-fit,minmax(190px,1fr));
         grid-gap:45px;
     }
+    .prix{
+        font-size: 21px;
+    }
+    .titre{
+        font-size: 18px;
+    }
+    .liste{
+        font-size: 13px;
+    }
+    .buton{
+        padding: 15px;
+        font-size: 18px;
+    }
 }

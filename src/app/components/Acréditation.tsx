@@ -30,7 +30,7 @@ function Acréditation(props:IpropsType) {
 
   return (
         <div className={`${poppins.variable} ${poppinsTini.variable} ${styles.main}`}>
-            <div className={styles.title}>Enregistrement</div>
+            <div className={styles.title}>Inscription</div>
             <form className={styles.formcontainer}>
                 <input type='text' placeholder='votre nom' className={styles.inputField} required />
                 <input type='text' placeholder='votre prenom' className={styles.inputField} required  />

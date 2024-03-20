@@ -29,7 +29,6 @@ function Thematique() {
         <Modal2>
             open
         </Modal2>
-        okay ca affiche
     </div>
   )
 }

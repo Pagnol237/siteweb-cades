@@ -1,7 +1,6 @@
 'use client'
 import Head from "next/head";
 import Navigation from '@/components/navigation';
-import styles from "@/style/home.module.scss"
 import Header from '@/components/Header'
 import PresidentBlock from "@/components/PresidentBlock";
 import PresidentUA from '@/components/PresidentUA'
@@ -19,6 +18,8 @@ import Footer from '@/components/Footer'
 import Modal from '@/components/Modal'
 import Acréditation from "@/components/Acréditation";
 import { useState } from "react";
+import styles5 from '@/style/header.module.scss'
+import styles6 from '@/style/navigation.module.scss';
 
 
 
@@ -26,12 +27,16 @@ import { useState } from "react";
 export default function Home() {
 
 
+
   const [onActive,setOnActive] = useState(0);
+  const [isopen,setIsopen]=useState(false);
   const openModal = ()=>{
         setOnActive(1);
   }
   const closeModal = ()=>{
     setOnActive(0);
+    setIsopen(!isopen);
+
 }
   console.log(onActive);
   return (
@@ -46,10 +51,12 @@ export default function Home() {
       <Modal nbr={onActive}>
         <Acréditation onClose={closeModal} />
       </Modal>
-      <Header/>
+      <div className={styles5.header_main}>
+        <Header/>
+      </div>
       <PresidentBlock/>
       <PresidentUA/>
-      <div id={styles1.main}>
+      <div id={styles1.activite_main}>
         <Titre1>Composantes</Titre1>
         {activite.map((data,index)=>(
           <Activite

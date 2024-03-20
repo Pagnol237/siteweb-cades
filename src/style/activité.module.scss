@@ -1,6 +1,6 @@
 @import './main.scss';
 
-#main{
+#activite_main{
     width: 100%;
     min-height: 100vh;
     padding: 90px 200px 80px 200px;
@@ -43,7 +43,7 @@
 //media query
 
 @media screen and (max-width:800px){
-    #main{
+    #activite_main{
         padding: 90px 30px 80px 30px;
     }
     .box{
