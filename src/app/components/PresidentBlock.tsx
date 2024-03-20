@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import styles from '@/style/PresidentBlock.module.scss'
 import Image from 'next/image'
@@ -8,7 +9,7 @@ import { Roboto,Poppins } from 'next/font/google'
 
 const poppins = Poppins({
     subsets:['latin'],
-    weight:'200',
+    weight:'400',
     variable: '--font-poppins'
 })
 

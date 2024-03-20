@@ -1,3 +1,4 @@
+'use client'
 import Head from "next/head";
 import Navigation from '@/components/navigation';
 import styles from "@/style/home.module.scss"
@@ -13,28 +14,50 @@ import styles2 from '@/style/thematique.module.scss'
 import Thematique from '@/components/Thematique'
 import Sponsoring from '@/components/Sponsoring'
 import styles3 from '@/style/sponsoring.module.scss'
+import styles4 from '@/style/footer.module.scss'
+import Footer from '@/components/Footer'
+import Modal from '@/components/Modal'
+import Acréditation from "@/components/Acréditation";
+import { useState } from "react";
+
 
 
 
 export default function Home() {
+
+
+  const [onActive,setOnActive] = useState(0);
+  const openModal = ()=>{
+        setOnActive(1);
+  }
+  const closeModal = ()=>{
+    setOnActive(0);
+}
+  console.log(onActive);
   return (
     <>
         <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
-      <Navigation/>
+      <Navigation 
+      onChow={openModal}
+      />
+      <Modal nbr={onActive}>
+        <Acréditation onClose={closeModal} />
+      </Modal>
       <Header/>
       <PresidentBlock/>
       <PresidentUA/>
       <div id={styles1.main}>
         <Titre1>Composantes</Titre1>
-        {activite.map((data)=>(
+        {activite.map((data,index)=>(
           <Activite
-          numero={data. numero}
-          texte={data. texte}
-          titre={data. titre}
-          picture={data. picture}
+          key={index}
+          numero={data.numero}
+          texte={data.texte}
+          titre={data.titre}
+          picture={data.picture}
           />
         ))}
         
@@ -48,6 +71,10 @@ export default function Home() {
       <div id={styles3.sponsoring}>
         <Titre1>Sponsoring</Titre1>
         <Sponsoring/>
+      </div>
+
+      <div id={styles4.footer}>
+          <Footer/>
       </div>
     </>
   );

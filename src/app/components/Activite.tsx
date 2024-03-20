@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import styles from '@/style/activité.module.scss'
 import { Poppins } from 'next/font/google'

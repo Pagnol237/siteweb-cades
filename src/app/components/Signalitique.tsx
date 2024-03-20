@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import styles from '@/style/signalitique.module.scss'
 import { Roboto,Poppins } from 'next/font/google'

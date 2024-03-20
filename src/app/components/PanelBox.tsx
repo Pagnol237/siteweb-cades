@@ -1,6 +1,8 @@
+'use client'
 import React from 'react'
 import styles from '@/style/thematique.module.scss'
 import { Poppins } from 'next/font/google'
+import Modal from '@/components/Modal'
 
 const poppins = Poppins({
     subsets:['latin'],

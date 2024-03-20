@@ -39,3 +39,28 @@
     font-size: 14px;
     margin-bottom: 15px;
 }
+
+//media query
+
+@media screen and (max-width:800px){
+    #main{
+        padding: 90px 30px 80px 30px;
+    }
+    .box{
+        flex-direction: column;
+        gap:8px
+    }
+    .miniature{
+        width: 100%;
+        height: auto;
+    }
+    .images{
+        width: 100%;
+        height: auto;
+        border-radius: 25px;
+    }
+    .nbr{
+        font-size: 40px;
+        -webkit-text-stroke: 1px $orangeColor;
+    }
+}

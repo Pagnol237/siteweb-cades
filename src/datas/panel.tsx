@@ -2,31 +2,35 @@
 const panel =[
     {
         number:1,
-        text:' Problématique d’une politique d’investissement coordonnée dans le secteur du numériqueet renforcer la coopération entre les États de la sous-région;'
+        text:'Exploiter le potentiel du numérique pour moderniser l\'administration et améliorer le service public.'
     },
     {
         number:2,
-        text:'Renforcer et étendre les infrastructures du numérique en rapport avec les problématiquesd’interconnexion entre pays et rendre opérationnels les services en ligne;'
+        text:'Cadre institutionnel et réglementaire propice au développement des infrastructures du numérique et Numérique panaf ricain'
     },
     {
         number:3,
-        text:'Problématique de la souveraineté numérique des États Africains '
+        text:'Les services financiers et non financiers mobiles (SFM) : impact sur le développement économique, problématique de la Co-régulation des SFM'
     },
     {
         number:4,
-        text:'Dialogue de Haut Niveau sur l’économie numérique en Afrique centrale'
+        text:'Impact du numérique sur le développement de la Centrafrique et de la sous-région Afrique central'
     },
     {
         number:5,
-        text:'Manifestations spéciales « L’état d’avancement de la transformation structurelle en Afrique centrale : défis et possibilités »'
+        text:'Problématiques du développement d\'une industrie du numérique en Centrafrique et dans la sous- région.'
     },
     {
         number:6,
-        text:'Hub de démonstrations « Transformation digitale pour effectuer le bond technologique en Afrique centrale – expériences et horizons'
+        text:'État des lieux et enjeux de la cryptomonnaie et le blockchain en Centrafrique et dans la sous- région'
     },
     {
         number:7,
-        text:'numérique et opportunités d’investissement ( investir dans la CEMAC)'
+        text:'Partenariat public privé et souveraineté numérique en Centraf rique et en Afrique Centrale'
+    },
+    {
+        number:8,
+        text:'Co-régulation des activités des autres secteurs fortement impactés par le numérique.'
     },
 ]
 

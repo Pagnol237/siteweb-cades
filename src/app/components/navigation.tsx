@@ -1,3 +1,4 @@
+'use client'
 import React from 'react'
 import styles from '@/style/navigation.module.scss'
 import Logo from '@/images/logo.jpg'
@@ -16,7 +17,9 @@ const poppinsbold = Poppins({
   weight:'400',
   variable: '--font-poppinsbold'
 })
-function Navigation() {
+
+function Navigation(props:any) {
+
   return (
     <div className={styles.navMain}>
       <div className={styles.logoContainer}>
@@ -32,7 +35,7 @@ function Navigation() {
             <Link href='/' className={styles.lien}>Activités</Link>
             <Link href='/' className={styles.lien}>thématiques</Link>
             <Link href='/' className={styles.lien}>Sponsoring</Link>
-            <Link href='/' className={styles.lien}>Accréditation</Link>
+            <Link href='/' className={styles.lien} onClick={props.onChow}>Accréditation</Link>
             <Link href='/' className={styles.lien}>Contacts</Link>
           </div>
         </div>

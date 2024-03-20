@@ -20,9 +20,36 @@
     font-size: 40px;
     text-align: center;
 }
+.theme{
+    font-family: var(--font-poppins);
+    font-size: 20px;
+    text-align: center;
+    margin-top: 15px;
+}
 .secondtext{
     font-family: var(--font-poppinsTini);
     font-size: 17px;
     text-align: center;
 }
+.cemacFlag{
+    width: 22%;
+    height: auto;
+    margin-top: 10px;
+}
 
+@media screen and (max-width:800px){
+    .firsttext{
+    font-family: var(--font-poppins);
+    font-size: 25px;
+    text-align: center;
+    }
+    .cemacFlag{
+        width: 50%;
+    }
+    .theme{
+        font-size: 15px;
+    }
+    .secondtext{
+        font-size: 12px;
+    }
+}

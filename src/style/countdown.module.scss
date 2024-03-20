@@ -30,3 +30,20 @@
     margin-top: 7px;
     font-family: var(--font-poppinsTini);
 }
+
+// media query
+
+@media screen and (max-width:800px){
+
+    .countdownMain{
+        width: 100%;    
+        padding: 30px;
+    }
+    .number{
+        padding: 40px 0px 40px 0px;
+        font-size: 20px;
+    }
+    .text{
+      font-size: 12px;
+    }
+}

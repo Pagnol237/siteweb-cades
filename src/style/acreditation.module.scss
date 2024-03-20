@@ -1,0 +1,58 @@
+@import './main.scss';
+
+.main{
+    width: 35%;
+    min-height: 200px;
+    border-radius: 25px;
+    padding: 25px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    position: relative;
+}
+.formcontainer{
+    width: 100%;
+}
+.inputField{
+    width: 100%;
+    border: solid 1px rgb(135, 135, 135);
+    padding: 13px;
+    border-radius: 15px;
+    font-family: var(--font-poppinsTini);
+    font-size: 10px;
+    outline: none;
+    margin-top: 10px;
+}
+
+.optionField{
+    background-color: red;
+}
+.title{
+    font-family: var(--font-poppins);
+    color:$orangeColor;
+    font-size: 20px;
+}
+.send{
+    width: 100%;
+    padding: 14px;
+    margin-top: 30px;
+    background-color: $blueColor;
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-family: var(--font-poppins);
+    cursor: pointer;
+}
+.closeBouton{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background-color: rgb(193, 31, 31);
+    font-family: var(--font-poppinsTini);
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    cursor: pointer;
+}

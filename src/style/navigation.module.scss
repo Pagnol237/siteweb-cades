@@ -46,3 +46,13 @@
     color: $blueColor;
     font-family: var(--font-poppinsbold);
 }
+
+@media screen and (max-width: 800px){
+    .logoContainer{
+        margin-left: 30px;
+    }
+    .linkContainer{
+        margin-right: 30px;
+        display: none;
+    }
+}

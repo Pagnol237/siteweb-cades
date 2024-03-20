@@ -31,3 +31,24 @@
     font-size: 15px;
     margin-top: 5px;
 }
+
+//media query
+
+@media screen and (max-width:800px){
+    #main{
+        padding:60px 30px 60Px 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .pictureContainer{
+        width: 100%;
+    }
+    .text{
+        width: 100%;
+    }
+    #mainUa{
+        padding:60px 30px 60Px 30px;
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
