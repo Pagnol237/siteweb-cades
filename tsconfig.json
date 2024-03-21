@@ -24,6 +24,7 @@
       "@/font/*":["./fonts/*"],
       "@/images/*":["./asset/images/*"],
       "@/datas/*":["./datas/*"],
+      "@/docs/*":["./docs/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
