@@ -24,19 +24,23 @@ interface IpropsType{
 
 function Acréditation(props:IpropsType) {
     const [categorie,setCategorie]= useState('');
-    const handlechange = (e:any)=>{
-        setCategorie(e.target.value)
+    const [name,setName]= useState('');
+    const [validation,setValidation]= useState(false);
+
+    const handelSumit =(e:any)=>{
+        setValidation(true);
     }
+
 
   return (
         <div className={`${poppins.variable} ${poppinsTini.variable} ${styles.main}`}>
             <div className={styles.title}>Inscription</div>
             <form className={styles.formcontainer}>
-                <input type='text' placeholder='votre nom' className={styles.inputField} required />
+                <input type='text' placeholder='votre nom' onChange={(e)=>setName(e.target.value)} className={styles.inputField} required />
                 <input type='text' placeholder='votre prenom' className={styles.inputField} required  />
                 <input type='text' placeholder='telephone' className={styles.inputField} required  />
                 <input type='email' placeholder='email' className={styles.inputField} required  />
-                <select className={styles.inputField} onChange={handlechange}>
+                <select className={styles.inputField} onChange={(e)=>setCategorie(e.target.value)}>
                     <option className={styles.optionField} value="">type d'enregistrement</option>
                     <option value="Medias">Medias</option>
                     <option value="Visiteur">Visiteur</option>
@@ -45,7 +49,7 @@ function Acréditation(props:IpropsType) {
                 {categorie === 'Medias' ?
                 <input type='text' placeholder='nom du media' className={styles.inputField} required  />:
                 '' }
-                <button type='submit' className={styles.send}>Envoyer</button>
+                <button type='submit' onClick={handelSumit} className={styles.send}>Envoyer</button>
             </form>
             <div className={styles.closeBouton} onClick={props.onClose} >
                 <IoCloseOutline size={25} color='white' />
