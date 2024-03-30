@@ -3,6 +3,7 @@ import React,{useState,useEffect} from 'react'
 import styles from '@/style/countdown.module.scss'
 import { clearInterval } from 'timers';
 import {Poppins} from '@next/font/google';
+import {motion} from 'framer-motion'
 
 
 
@@ -47,7 +48,8 @@ function CountDown() {
     },[]);
 
   return (
-    <div className={`${styles.countdownMain} ${poppins.variable}`}>
+    <motion.div className={`${styles.countdownMain} ${poppins.variable}`} initial={{opacity:0,y:50}} whileInView={{opacity:1,y:0}} transition={{type:"spring",stiffness:120,delay:0.5,}} >
+        
         {Object.entries(timeleft).map((data,label)=>{
             const number = data[0];
             const name = data[1];
@@ -62,7 +64,7 @@ function CountDown() {
   
        
 
-    </div>
+    </motion.div>
   )
 }
 

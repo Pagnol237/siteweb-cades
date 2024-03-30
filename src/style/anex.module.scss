@@ -1,0 +1,41 @@
+@import './main.scss';
+.anexMain{
+    width: 100%;
+    padding: 90px 200px 80px 200px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+    grid-gap:55px;
+}
+.box1{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(100px,1fr));
+    grid-gap:25px;
+}
+.box2{
+    width: 100%;
+}
+.coverpicture{
+    width: 100%;
+    height: auto;
+}
+.standImage{
+    width: 100%;
+    height: auto;
+}
+.standSize{
+    font-family: var(--font-poppinsTini);
+    font-size: 13px;
+}
+.standprise{
+    font-family: var(--font-poppins);
+    color: $orangeColor;
+}
+
+@media screen and (max-width:800px){
+    .anexMain{
+        padding: 90px 30px 80px 30px;
+
+    }
+}

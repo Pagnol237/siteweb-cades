@@ -5,6 +5,7 @@ import { Poppins } from 'next/font/google'
 import Link from 'next/link'
 import panelDetail from 'app/details/page'
 import { GoArrowLeft,GoArrowRight } from "react-icons/go";
+import {motion} from 'framer-motion'
 
 const poppins = Poppins({
     subsets:['latin'],
@@ -37,7 +38,7 @@ function PanelBox(props:ipropsType) {
             soustheme:props. soustheme,
         }
     }}>
-        <div className={`${styles.panelBoxMain} ${poppinsTini.variable} ${poppins.variable}`}>
+        <motion.div whileHover={{scale:1.07,originX:0}}  transition={{type:"spring",stiffness:500,}} className={`${styles.panelBoxMain} ${poppinsTini.variable} ${poppins.variable}`}>
             <div className={styles.nbr}>{props.number}</div>
             <div className={styles.text}>
                 <div className={styles.panelTitle}>Panel {props.number}</div>
@@ -46,7 +47,7 @@ function PanelBox(props:ipropsType) {
                 <GoArrowRight size={20} color='#005483' />
                 </div>
             </div>
-        </div>
+        </motion.div>
     </Link>
     </>
   )

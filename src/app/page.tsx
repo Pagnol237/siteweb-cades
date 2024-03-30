@@ -20,7 +20,28 @@ import Acréditation from "@/components/Acréditation";
 import { useState } from "react";
 import styles5 from '@/style/header.module.scss'
 import styles6 from '@/style/navigation.module.scss';
+import styles7 from '@/style/anex.module.scss';
 import Link from "next/link";
+import Anex from '@/components/Anex'
+import {easeIn, motion, spring} from 'framer-motion'
+
+const variants = {
+  view:(index:any)=>({
+    opacity:1,
+    x:0,
+    transition:{
+      delay:index*0.19,
+      type: spring,
+      stiffness:300,
+      easeIn:easeIn,
+    }
+  }),
+  hidden:{
+    opacity:0,
+    x:-10
+  }
+
+}
 
 
 
@@ -60,6 +81,7 @@ export default function Home() {
       <div id={styles1.activite_main}>
         <Titre1>Composantes</Titre1>
         {activite.map((data,index)=>(
+          <motion.div custom={index} variants={variants} initial="hidden" whileInView="view">
           <Activite
           key={index}
           numero={data.numero}
@@ -67,6 +89,7 @@ export default function Home() {
           titre={data.titre}
           picture={data.picture}
           />
+          </motion.div>
         ))}
         
       </div>
@@ -80,6 +103,9 @@ export default function Home() {
         <Titre1>Sponsoring</Titre1>
         <Sponsoring/>
       </div>
+
+        <Anex/>
+
 
       <div id={styles4.footer}>
           <Footer/>

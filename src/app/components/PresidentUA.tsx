@@ -4,6 +4,7 @@ import styles from '@/style/PresidentBlock.module.scss'
 import Image from 'next/image'
 import Pic from '@/images/pr_UA.jpg'
 import { Roboto,Poppins } from 'next/font/google'
+import {easeIn, motion} from 'framer-motion'
 
 
 const poppins = Poppins({
@@ -23,7 +24,7 @@ function PresidentUA() {
     <div id={styles.mainUa}>
 
 
-        <div className={`${styles.text} ${poppinsTini.variable}`}>
+        <motion.div initial={{opacity:0,x:"-10vw"}} whileInView={{opacity:1,x:0}} transition={{ease:easeIn,duration:0.3}} className={`${styles.text} ${poppinsTini.variable}`}>
         Message du Président de la Commission de l’Union Africaine S.E Moussa Faki
         Mahamat<br /><br />
         <b>L’Afrique devra défendre ses intérêts à travers
@@ -38,15 +39,15 @@ function PresidentUA() {
         climatique, du commerce, de la migration, du financement du développement,
         du numérique et dans la résolution des conflits… »
             <div className={`${styles.poste} ${poppins.variable}`}>S.E. Moussa Faki Mahamat,</div>
-        </div>
+        </motion.div>
 
-        <div className={styles.pictureContainer}>
+        <motion.div initial={{opacity:0,x:"40vw"}} whileInView={{opacity:1,x:0}} transition={{ease:easeIn,duration:0.6,delay:0.5}} className={styles.pictureContainer}>
             <Image
                 src={Pic}
                 alt='fostin archange touadera president de rca en 2024'
                 className={styles.photo}
             />
-        </div>
+        </motion.div>
     </div>
   )
 }

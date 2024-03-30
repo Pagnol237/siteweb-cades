@@ -9,6 +9,7 @@ import { GoArrowLeft,GoArrowRight } from "react-icons/go";
 import {Poppins } from 'next/font/google'
 import data from '@/datas/panel'
 import Image from 'next/image'
+import {easeIn, motion} from 'framer-motion'
 
 
 
@@ -25,6 +26,55 @@ const poppinsTini = Poppins({
 })
 
 
+const variants = {
+  start:{
+    opacity:0,
+    x:-100
+  },
+  end:{
+    opacity:1,
+    x:0,
+    transition:{
+      type:'spring',
+      tiffness:120,
+      duration:1,
+      when:"beforeChildren"
+    }
+  },
+}
+
+
+const newvariants = {
+  visible: (index:any) => ({
+    opacity: 1,
+    y:0,
+    transition: {
+      delay: index * 0.3,
+      duration:1,
+      type:'spring',
+      tiffeness:150,
+    }
+  }),
+  hidden: { opacity: 0,y:70 }
+};
+
+
+const aurateurVariants ={
+  show: (i:any)=>({
+    scale:1,
+    transition:{
+      type:'spring',
+      stiffness:200,
+      durations:4,
+      delay:i*0.3,
+      eaase:easeIn
+      
+    }
+  }),
+  hidden:{
+    scale:0,
+  }
+}
 
 
 function panelDetail({searchParams}:any) {
@@ -43,19 +93,21 @@ const nextItems = ()=>{
 const previousItems = ()=>{
   setCurentid(curentid-1);
 }
-const display = subpanel?.map((items)=>{
+const display = subpanel?.map((items,index)=>{
   return (
-      <div>- {items}</div>
+
+      <motion.div key={index} custom={index} variants={newvariants} initial="hidden" whileInView="visible">- {items}</motion.div>
+
   )
 });
 
-const aurateur =  participans?.map((item)=>{
+const aurateur =  participans?.map((item,i)=>{
   return(
-    <div className={styles.aurateurContainer}>
+    <motion.div custom={i} variants={aurateurVariants} initial="hidden" animate="show" className={styles.aurateurContainer}>
     <Image src={item.Pic} alt={item.alt} className={styles.picture}/>
     <div className={styles.nom}>{item.nom}</div>
     <div className={styles.poste}>{item.poste}</div>
-  </div>
+  </motion.div>
   )
 })
 
@@ -71,9 +123,9 @@ const aurateur =  participans?.map((item)=>{
         <div className={styles.boxMain}>
          { /* start box 1*/}
           <div className={`${styles.box} $${poppins.variable}`}>
-            <div className={styles.title}>Panel {panelNumber}</div>
+            <motion.div variants={variants} initial="start" animate="end" className={styles.title}>Panel {panelNumber}</motion.div>
             <div className={styles.detail}>{panel}</div>
-            <div className={styles.title}>Sous thème</div>
+            <motion.div variants={variants} initial="start" animate="end" className={styles.title}>Sous thème</motion.div>
             <div className={styles.detail}>{display }</div>
           </div>
           { /* end box 1*/}

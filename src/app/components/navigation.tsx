@@ -12,6 +12,7 @@ import { Link } from 'react-scroll'
 import {Roboto,Poppins} from 'next/font/google'
 import { HiMiniBars3,HiMiniXMark } from "react-icons/hi2";
 import { useState } from 'react'
+import {motion} from 'framer-motion'
 
 const poppins = Poppins({
   subsets:['latin'],
@@ -33,6 +34,11 @@ function Navigation(props:any) {
       setIsopen(!isopen)
   }
 
+  const varaint ={
+    open:{opacity:1,x:0},
+  close:{opacity:0,x:-100}
+  }
+
   return (
     <div className={styles.navMain}>
       <div className={styles.logoContainer}>
@@ -51,14 +57,14 @@ function Navigation(props:any) {
         </div>
 
         <div className={`${isopen?styles.on:styles.off}`}>
-          <div className={`${styles.linkContainer} ${poppins.variable} ${poppinsbold.variable}`}>
+          <motion.div className={`${styles.linkContainer} ${poppins.variable} ${poppinsbold.variable}`} >
               <Link onClick={togglemenu}  to={`${styles4.header_main}`} className={`${styles.lien} ${styles.activeLink}`} spy={true} smooth={true} offset={-60} duration={500}>Accueil</Link>
               <Link onClick={togglemenu}  to={`${styles1.activite_main}`} className={styles.lien} spy={true} smooth={true} offset={-60} duration={500}>Activités</Link>
               <Link onClick={togglemenu}  to={`${styles2.thematique}`} className={styles.lien} spy={true} smooth={true} offset={-60} duration={500}>thématiques</Link>
               <Link onClick={togglemenu}  to={`${styles3.sponsoring}`} className={styles.lien} spy={true} smooth={true} offset={-60} duration={500}>Sponsoring</Link>
               <Link to={`${styles1.banner_main}`} className={styles.lien} onClick={props.onChow}>Inscription</Link>
               <Link onClick={togglemenu}  to={`${styles5.footer}`} className={styles.lien} spy={true} smooth={true} offset={-60} duration={500}>Contacts</Link>
-          </div>
+          </motion.div>
         </div>
 
     </div>

@@ -4,6 +4,7 @@ import styles from '@/style/PresidentBlock.module.scss'
 import Image from 'next/image'
 import Pic from '@/images/pr_rca.jpg'
 import { Roboto,Poppins } from 'next/font/google'
+import {easeIn, motion} from 'framer-motion'
 
 
 
@@ -23,15 +24,15 @@ const poppinsTini = Poppins({
 function PresidentBlock() {
   return (
     <div id={styles.main}>
-        <div className={styles.pictureContainer}>
+        <motion.div initial={{opacity:0,x:"-30vw"}} whileInView={{opacity:1,x:0}} transition={{ease:easeIn,duration:0.5}} className={styles.pictureContainer}>
             <Image
                 src={Pic}
                 alt='fostin archange touadera president de rca en 2024'
                 className={styles.photo}
             />
-        </div>
+        </motion.div>
 
-        <div className={`${styles.text} ${poppinsTini.variable}`}>
+        <motion.div initial={{opacity:0,x:"10vw"}} whileInView={{opacity:1,x:0}} transition={{ease:easeIn,duration:0.5,delay:0.3}} className={`${styles.text} ${poppinsTini.variable}`}>
         <div className={`${styles.poste} ${poppins.variable}`}>DE S.E FAUSTIN ARCHANGE TOUADERA,</div>
         <div style={{fontSize:10}}>Président de la République Centrafricaine,<br />
             Président en exercice de la CEMAC
@@ -44,7 +45,7 @@ function PresidentBlock() {
         Extrait du discours de Son Excellence <b> M. Faustin Archange Touadera, Président de la République Centrafricaine</b> à l’occasion de la cérémonie officielle d’ouverture des travaux de l’atelier sur l’économie numérique et la transformation digitale des secteurs public et prive en République Centrafricaine lu le 25 août 2022 à Bangui.
             
 
-        </div>
+        </motion.div>
     </div>
   )
 }
