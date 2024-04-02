@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import '@/style/global.css';
-import {Satisfy} from '@next/font/google'
+import {Satisfy} from 'next/font/google'
 
 const satisfy = Satisfy({
   subsets: ['latin'],

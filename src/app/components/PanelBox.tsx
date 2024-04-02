@@ -35,7 +35,6 @@ function PanelBox(props:ipropsType) {
         pathname:"/details",
         query:{
             id:props.id,
-            soustheme:props. soustheme,
         }
     }}>
         <motion.div whileHover={{scale:1.07,originX:0}}  transition={{type:"spring",stiffness:500,}} className={`${styles.panelBoxMain} ${poppinsTini.variable} ${poppins.variable}`}>

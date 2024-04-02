@@ -1,15 +1,27 @@
 "use client"
 import React,{useState} from 'react'
-import Navigation from '@/components/navigation'
 import Link from 'next/link'
 import styles from '@/style/paneldetail.module.scss'
-import Footer from '@/components/Footer'
 import styles4 from '@/style/footer.module.scss'
 import { GoArrowLeft,GoArrowRight } from "react-icons/go";
 import {Poppins } from 'next/font/google'
 import data from '@/datas/panel'
 import Image from 'next/image'
 import {easeIn, motion} from 'framer-motion'
+import dynamic from 'next/dynamic'
+import { useSearchParams } from 'next/navigation'
+
+const Navigation = dynamic(
+	() => import('@/components/navigation'),
+	{ ssr: false }
+);
+
+const Footer = dynamic(
+	() => import('@/components/Footer'),
+	{ ssr: false }
+);
+
+
 
 
 
@@ -77,8 +89,15 @@ const aurateurVariants ={
 }
 
 
-function panelDetail({searchParams}:any) {
-  const id:number = parseFloat(searchParams.id);
+export default function Page() {
+  const searchParams = useSearchParams();
+{/*  alert(searchParams.get("id"));
+  const nbr1 = Number(searchParams.get("id"));
+  const nbr2 = 1;
+  const total=  nbr1 + nbr2
+alert(nbr1+'+'+nbr2+"="+total);*/}
+  
+  const id = Number(searchParams.get("id"));
   const [curentid,setCurentid] = useState(id);
   const curentPanel = data[curentid];
   const panel = data[curentid].text;
@@ -159,4 +178,3 @@ const aurateur =  participans?.map((item,i)=>{
   )
 }
 
-export default panelDetail

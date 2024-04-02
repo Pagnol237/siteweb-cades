@@ -2,7 +2,7 @@
 import React,{useState,useEffect} from 'react'
 import styles from '@/style/countdown.module.scss'
 import { clearInterval } from 'timers';
-import {Poppins} from '@next/font/google';
+import {Poppins} from 'next/font/google';
 import {motion} from 'framer-motion'
 
 

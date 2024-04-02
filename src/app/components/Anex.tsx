@@ -43,7 +43,7 @@ function Anex() {
         </div>
 
         <div className={styles.box2}>
-            <Carousel>
+            <Carousel showThumbs={false} >
 
                 <div>
                     <div className={styles.standSize}> Stand 25 m<sup>2</sup></div>
