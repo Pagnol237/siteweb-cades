@@ -1,5 +1,5 @@
 "use client"
-import React,{useState} from 'react'
+import React,{useState,useCallback} from 'react'
 import Link from 'next/link'
 import styles from '@/style/paneldetail.module.scss'
 import styles4 from '@/style/footer.module.scss'
@@ -9,22 +9,12 @@ import data from '@/datas/panel'
 import Image from 'next/image'
 import {easeIn, motion} from 'framer-motion'
 import dynamic from 'next/dynamic'
-import { useSearchParams } from 'next/navigation'
+import { useSearchParams,useRouter,usePathname } from 'next/navigation'
+import Navigation from '@/components/navigation'
+import Footer from '@/components/Footer'
+import { Suspense } from 'react'
 
-const Navigation = dynamic(
-	() => import('@/components/navigation'),
-	{ ssr: false }
-);
-
-const Footer = dynamic(
-	() => import('@/components/Footer'),
-	{ ssr: false }
-);
-
-
-
-
-
+// font using on this component
 const poppins = Poppins({
     subsets:['latin'],
     weight:'400',
@@ -37,6 +27,7 @@ const poppinsTini = Poppins({
     variable: '--font-poppinsTini'
 })
 
+// animation variants 
 
 const variants = {
   start:{
@@ -89,51 +80,78 @@ const aurateurVariants ={
 }
 
 
-export default function Page() {
-  const searchParams = useSearchParams();
-{/*  alert(searchParams.get("id"));
-  const nbr1 = Number(searchParams.get("id"));
-  const nbr2 = 1;
-  const total=  nbr1 + nbr2
-alert(nbr1+'+'+nbr2+"="+total);*/}
+
+// external component using searchParams
+
+const Detail = ()=>{
+    const router = useRouter()
+    const pathname = usePathname()
+    const searchParams = useSearchParams()
+    const id = searchParams.get("id");
+    const [curentid,setCurentid] = useState(Number(id));
+    const panelNumber = Number(curentid) +1;
+    const panel = data[curentid].text;
+    const subpanel = data[curentid].soustheme;
+    const participans = data[curentid].participans;
+
+  //calback function to put url in cache
+  const createQueryString = useCallback
+  (
+    (name: string, value: string) => 
+      {
+        const params = new URLSearchParams(searchParams.toString())
+        params.set(name, value)
   
-  const id = Number(searchParams.get("id"));
-  const [curentid,setCurentid] = useState(id);
-  const curentPanel = data[curentid];
-  const panel = data[curentid].text;
-  const subpanel = data[curentid].soustheme;
-  const participans = data[curentid].participans;
-  const index = data[curentid].number;
-  const panelNumber:number = curentid +1;
-
-const nextItems = ()=>{
-  setCurentid(curentid+1);
-}
-const previousItems = ()=>{
-  setCurentid(curentid-1);
-}
-const display = subpanel?.map((items,index)=>{
-  return (
-
-      <motion.div key={index} custom={index} variants={newvariants} initial="hidden" whileInView="visible">- {items}</motion.div>
-
+        return params.toString()
+      },
+      [searchParams]
   )
-});
 
-const aurateur =  participans?.map((item,i)=>{
+  // next button function
+  const nextItems = ()=>
+  {
+    let nextId = parseInt(id ?? "0") + 1;
+    router.push("/details" + "?" + createQueryString("id", nextId.toString()));
+    setCurentid(curentid+1);
+
+  }
+
+  // previous button function
+  const previousItems = ()=>
+  {
+    let prevId = parseInt(id ?? "0") - 1;
+    router.push("/details" + "?" + createQueryString("id", prevId.toString()));
+    setCurentid(curentid-1);
+
+  }
+
+  // subpanel const 
+  const display = subpanel?.map((items,index)=>{
+    return (
+  
+        <motion.div key={index} custom={index} variants={newvariants} initial="hidden" whileInView="visible">
+          - {items}
+        </motion.div>
+    )
+  });
+
+  //author const 
+
+  const aurateur =  participans?.map((item,i)=>{
+    return(
+      <motion.div custom={i} variants={aurateurVariants} initial="hidden" animate="show" className={styles.aurateurContainer}>
+      <Image src={item.Pic} alt={item.alt} className={styles.picture}/>
+      <div className={styles.nom}>{item.nom}</div>
+      <div className={styles.poste}>{item.poste}</div>
+    </motion.div>
+    )
+  })
+
+
+
   return(
-    <motion.div custom={i} variants={aurateurVariants} initial="hidden" animate="show" className={styles.aurateurContainer}>
-    <Image src={item.Pic} alt={item.alt} className={styles.picture}/>
-    <div className={styles.nom}>{item.nom}</div>
-    <div className={styles.poste}>{item.poste}</div>
-  </motion.div>
-  )
-})
-
-  return (
     <>
-      <Navigation/>
-      <div className={`${styles.main} ${poppins.variable} ${poppinsTini.variable}`}>
+<div className={`${styles.main} ${poppins.variable} ${poppinsTini.variable}`}>
         <Link href="/">
           <div className={styles.retour}>
           <GoArrowLeft size={18} color='white' />  retour
@@ -170,11 +188,26 @@ const aurateur =  participans?.map((item,i)=>{
 
       </div>
 
-      
-      <div id={styles4.footer}>
-          <Footer/>
-      </div>
     </>
   )
 }
+
+
+
+
+
+export default function Page() {
+    return (
+      <>
+          <Navigation/>
+          <Suspense>
+            <Detail/>
+          </Suspense>
+
+          <div id={styles4.footer}>
+            <Footer/>
+          </div>
+      </>
+    )
+  }
 

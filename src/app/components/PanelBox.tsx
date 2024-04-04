@@ -32,7 +32,7 @@ function PanelBox(props:ipropsType) {
   return (
     <>
     <Link className={styles.linkText} href={{
-        pathname:"/details",
+        pathname:"./details",
         query:{
             id:props.id,
         }
