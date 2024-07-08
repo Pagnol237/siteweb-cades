@@ -8,7 +8,7 @@ import {motion} from 'framer-motion'
 
 
 
-const COUNTDOWN_TARGET = new Date("2024-05-28T23:59:59");
+const COUNTDOWN_TARGET = new Date("2024-12-13T23:59:59");
 
 const getTimeLeft =  () => {
     const totalTimeLeft = COUNTDOWN_TARGET.getTime() - new Date().getTime();

@@ -2,8 +2,8 @@
 const sponsoring = [
     {
         nbr:1,
-        titre:'SPONSOR OFFICIEL (Top sponsor)',
-        prix:'100 000 000',
+        titre:'SPONSOR OFFICIEL ',
+        prix:'(Top sponsor)',
         description:[
             'Support PLV',
             'Support vestimentaire',
@@ -15,8 +15,8 @@ const sponsoring = [
     },
     {
         nbr:2,
-        titre:'SPONSOR MAJOR (Sponsor d’argent) :',
-        prix:'75 000 000',
+        titre:'SPONSOR MAJOR',
+        prix:'(Sponsor d’argent)',
         description:[
             'Support PLV',
             'Support vestimentaire',
@@ -26,8 +26,8 @@ const sponsoring = [
     },
     {
         nbr:3,
-        titre:'CO-SPONSOR (Eperon de Bronze) :',
-        prix:'50 000 000',
+        titre:'CO-SPONSOR',
+        prix:'(Eperon de Bronze)',
         description:[
             'Support PLV',
             'Support vestimentaire',

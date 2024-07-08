@@ -44,10 +44,8 @@ function SponsoringBox() {
         {data.map((items,i)=>(
             <motion.div custom={i} variants={variants} initial="hidden" whileInView="view" className={`${styles.sponsoringBoxmain} ${poppins.variable} ${poppinsTini.variable}`}>
                 <div className={styles.header}>
-                  <div className={styles.cercle}></div>
-                  <div className={styles.cercle2}></div>
-                    <div className={styles.prix}>{items.prix} Fcfa</div>
-                    <div className={styles.titre}>{items.titre}</div>
+                    <div className={styles.prix}>{items.titre}</div>
+                    <div className={styles.titre}>{items.prix}</div>
                     
                 </div>
                 {items.description.map((lebel)=>(
@@ -55,9 +53,9 @@ function SponsoringBox() {
                       {lebel}
                     </div>
                 ))}
-                <div  className={styles.butonContainer}>
+         {/*       <div  className={styles.butonContainer}>
                     <div className={styles.buton}>détails</div>
-                </div>
+                </div>*/}
             </motion.div>
             
         ))}

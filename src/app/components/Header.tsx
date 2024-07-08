@@ -32,7 +32,7 @@ function header() {
         </motion.div>
 
         <motion.div initial={{opacity:0,y:-50}} whileInView={{opacity:1,y:0}} transition={{type:"spring",stiffness:120,delay:0.3,}}  >
-            <div className={`${poppinsTini.variable} ${styles.secondtext}`}>Bangui 2024 hôtel Ledger pladza du 28 au 30 mai 2024</div>
+            <div className={`${poppinsTini.variable} ${styles.secondtext}`}>Bangui 2024 hôtel Ledger pladza du 10 au 13 Decembre 2024</div>
             <div className={`${poppins.variable} ${styles.theme}`}>
                 "CONNECTING AFRICA, THI IS THE MOMENT"<br />
             </div>
