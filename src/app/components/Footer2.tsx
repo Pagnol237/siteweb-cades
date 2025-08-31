@@ -36,7 +36,7 @@ function Footer2() {
             </div>
         </div>
         <div>
-        <MdCopyright size={15} /> Copyright 2024 all acess agency
+        <MdCopyright size={15} /> developper par Franck Pagnol Nounjo Djomini
         </div>
     </div>
   )
