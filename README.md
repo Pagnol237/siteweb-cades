@@ -1,56 +1,41 @@
-🌐 Site Web – CADES
+# Site Web – CADES
 
-Un site web moderne conçu pour présenter la CADES et offrir aux utilisateurs une plateforme claire, intuitive et responsive. Ce projet a été développé avec une approche centrée sur la simplicité, l’accessibilité et une structure facilement extensible.
+Ce projet est le **site web officiel de CADES**, une organisation (ou entreprise) dont l’objectif est de présenter ses services, ses activités et permettre un contact simple avec les utilisateurs.  
+Le site est entièrement réalisé avec **Next.js**, **TypeScript** et **SCSS**, afin d’obtenir une application performante, moderne et facile à maintenir.
 
-🚀 Objectifs du Projet
+Le site est conçu pour être rapide, responsive et optimisé pour le SEO.
 
-Le but de ce site est de fournir :
+---
 
-Une présentation professionnelle de la CADES.
+## 🚀 Fonctionnalités principales
 
-Un site facilement administrable, organisé et lisible.
+- 🖥️ **Interface moderne et responsive**
+- ⚡ Rendu ultra rapide grâce à **Next.js** (SSR / optimisation des images)
+- 🎨 **Styles structurés en SCSS**
+- 🧭 Navigation fluide entre les sections
+- 📞 Section contact / information
+- 🌐 Déploiement automatique via **Vercel**
+- 🔒 Architecture propre et maintenable
 
-Un design responsive, adapté aux ordinateurs, tablettes et téléphones.
+---
 
-Une base stable et maintenable pour des évolutions futures.
+## 🛠️ Stack Technique
 
-🛠️ Technologies Utilisées
-Technologie	Rôle
-HTML5	Structure du site
-CSS3	Mise en page et design
-JavaScript	Interactions légères (si utilisé dans ton projet)
-GitHub Pages (optionnel)	Hébergement
-📁 Structure du Projet
-siteweb-cades/
-│── assets/           # Images, icônes, fichiers multimédia
-│── css/              # Feuilles de style
-│── js/               # Scripts JavaScript
-│── index.html        # Page principale
-│── pages/            # Pages secondaires (si présentes)
-│── README.md         # Documentation
+| Technologie | Rôle |
+|------------|------|
+| **Next.js 14+** | Framework React moderne avec App Router |
+| **React** | Rendu des composants |
+| **TypeScript** | Typage strict + meilleure qualité de code |
+| **SCSS** | Styles avancés, variables, mixins |
+| **Vercel** | Déploiement et CI/CD |
+| **Node.js** | Environnement d'exécution |
 
-✨ Fonctionnalités Principales
+---
 
-🖼️ Interface épurée et professionnelle
+## 📸 Aperçu du site
 
-📱 Design responsive avec grille flexible
+> 
 
-🧭 Navigation simple et intuitive
+---
 
-🎨 Styles personnalisés pour cohérence visuelle
 
-📄 Contenus organisés en sections claires
-
-💡 Code propre et facile à maintenir
-
-⚙️ Installation & Lancement
-1️⃣ Cloner le projet
-git clone https://github.com/Pagnol237/siteweb-cades.git
-
-2️⃣ Ouvrir le site
-
-Il suffit d’ouvrir index.html dans votre navigateur :
-
-cd siteweb-cades
-start index.html       # Windows
-open index.html        # macOS
