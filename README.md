@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+🌐 Site Web – CADES
 
-## Getting Started
+Un site web moderne conçu pour présenter la CADES et offrir aux utilisateurs une plateforme claire, intuitive et responsive. Ce projet a été développé avec une approche centrée sur la simplicité, l’accessibilité et une structure facilement extensible.
 
-First, run the development server:
+🚀 Objectifs du Projet
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Le but de ce site est de fournir :
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Une présentation professionnelle de la CADES.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Un site facilement administrable, organisé et lisible.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Un design responsive, adapté aux ordinateurs, tablettes et téléphones.
 
-## Learn More
+Une base stable et maintenable pour des évolutions futures.
 
-To learn more about Next.js, take a look at the following resources:
+🛠️ Technologies Utilisées
+Technologie	Rôle
+HTML5	Structure du site
+CSS3	Mise en page et design
+JavaScript	Interactions légères (si utilisé dans ton projet)
+GitHub Pages (optionnel)	Hébergement
+📁 Structure du Projet
+siteweb-cades/
+│── assets/           # Images, icônes, fichiers multimédia
+│── css/              # Feuilles de style
+│── js/               # Scripts JavaScript
+│── index.html        # Page principale
+│── pages/            # Pages secondaires (si présentes)
+│── README.md         # Documentation
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+✨ Fonctionnalités Principales
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+🖼️ Interface épurée et professionnelle
 
-## Deploy on Vercel
+📱 Design responsive avec grille flexible
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+🧭 Navigation simple et intuitive
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+🎨 Styles personnalisés pour cohérence visuelle
+
+📄 Contenus organisés en sections claires
+
+💡 Code propre et facile à maintenir
+
+⚙️ Installation & Lancement
+1️⃣ Cloner le projet
+git clone https://github.com/Pagnol237/siteweb-cades.git
+
+2️⃣ Ouvrir le site
+
+Il suffit d’ouvrir index.html dans votre navigateur :
+
+cd siteweb-cades
+start index.html       # Windows
+open index.html        # macOS
