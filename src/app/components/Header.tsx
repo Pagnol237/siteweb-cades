@@ -38,7 +38,7 @@ function header() {
             </div>
         </motion.div>
 
-        <CountDown/>
+        {/*<CountDown/>*/}
         <motion.div style={{width:"100%",display:"flex",alignItems:'center',justifyContent:"center"}} initial={{scale:0}} whileInView={{scale:1}} transition={{type:"spring", delay:0.7,stiffness:200}}>
         <Image
             src={CemacPic}
